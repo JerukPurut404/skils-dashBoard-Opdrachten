@@ -43,7 +43,7 @@ class App {
           .then(data => {
             const show = data[0].show;
            document.getElementById("tv-show-title").innerText = show.name;
-           document.getElementById("tv-show-poster").innerHTML = show.summary;
+           document.getElementById("tv-show-description").innerHTML = show.summary;
            document.getElementById("tv-show-poster").src = show.image.medium;
           })
           .catch(error => {
