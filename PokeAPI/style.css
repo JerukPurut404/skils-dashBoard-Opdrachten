@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 2rem;
+  font-family: sans-serif;
+  background: #FFF2CC;
+  padding: 4rem;
+}
+
+.cards{
+  height: 85vh;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(12,1fr);
+  gap: 2rem;
+}
+
+.card{
+  list-style: none;
+  background: rgba(255, 255, 255,0.9);
+  border-radius: 1rem;
+  box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
+}
+
+.card--first {
+  grid-column: 1 / 5;
+  grid-row: 1 / 7;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.card--first > input{
+  width: 70%;
+  height: 4rem;
+  font-size: 2rem;
+  font-family: sans-serif;
+  padding-left: 2rem;
+}
+
+.card--second{
+  grid-column: 5/20;
+  grid-row: 1 / 11;
+  padding: 4rem;
+  min-width: 0;
+}
+
+.wrapper{
+  display:flex;
+  height:100%;
+}
+
+.wrapper > p{
+  height:100%;
+  overflow-y:scroll;
+}
+
+.card--third{
+  grid-row: 7/ 13;
+  grid-column: 1/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.card--third > img{
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+}
+
+.card--third > button{
+  width: 19rem;
+  height: 9rem;
+  font-size: 2rem;
+  margin: 1rem;
+  font-family: sans-serif;
+  border: none;
+  background: #ee1511;
+  color: #eee;
+  border-radius: 0.5rem;
+}
+
+.card--fourth {
+  grid-column: 5 / 10;
+  grid-row: 19 / 12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+
+@media screen and (max-width: 87.5rem) {
+  .card--second{
+    grid-row: 1 / 13;
+  }
+
+  .card--third{
+    grid-column: 1 / 5;
+  }
+}
+
+@media screen and (max-width: 62.5rem) {
+  .card--first, .card--second{
+    display:none;
+  }
+}
